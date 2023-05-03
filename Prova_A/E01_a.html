@@ -7,11 +7,12 @@
     */
 
     //ENTRADA
-
+    const grama = Number(prompt(`Informe o consumo diáro de seu cachorro`).trim().replace(",","."));
 
     //PROCESSAMENTO
-
+    const gramaSemanais = (grama * 0.3) + grama * 7;
 
     //SAÍDA
+    document.write(`Seu cachorro consome ${gramaSemanais.toFixed(2).replace(".",",")} gramas semanais`);
 
 </script>

@@ -8,11 +8,15 @@
     */
 
     //ENTRADA
-
+    const kmLitro = Number(prompt(`Informe quantos km sua motocicleta faz por litro`).trim().replace(",", "."));
+    const distancia = Number(prompt(`Informe os quilômetros rodados`).trim().replace(",", "."));
 
     //PROCESSAMENTO
-
-
+    const combustivel = distancia / kmLitro;
+    const revisao = distancia / 2000;
+    const revisaoTotal = Math.floor(revisao) * 200;
+    
     //SAÍDA
+    document.write(`Os litros consumidos foram ${combustivel.toFixed(2).replace(".",",")}L e total gasto com revisões foi R$${revisaoTotal.toFixed(2).replace(".",",")}`);
 
 </script>

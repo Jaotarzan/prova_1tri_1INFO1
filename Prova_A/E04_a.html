@@ -8,11 +8,16 @@
     */
 
     //ENTRADA
-
+    const distancia = Number(prompt(`Informe a distancia total da viagem`).trim().replace(",", "."));
 
     //PROCESSAMENTO
-
+    const combustivel = distancia / 14;
+    const precoCombustivel = combustivel * 5.19;
+    const pedagio = distancia / 50;
+    const pedagioTotal = Math.floor(pedagio) * 4.9;
+    const total = precoCombustivel + pedagioTotal;
 
     //SAÍDA
+    document.write(`Os litros nescessários serão ${combustivel.toFixed(2).replace(".", ",")}L. O preço total do combustível será R$${precoCombustivel.toFixed(2).replace(".", ",")}. O preço total do pedágio será R$${pedagioTotal.toFixed(2).replace(".", ",")} e o preço total da viagem será R$${total.toFixed(2).replace(".", ",")}`);
 
 </script>
